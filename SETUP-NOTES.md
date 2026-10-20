@@ -62,17 +62,6 @@ subject = CN=github.com
 > 注意：`http.sslNoRevoke` / `http.schannelCheckRevoke` 在此环境下**无效**——问题不在开关，而在 CRL 端点不可达。
 > 备用 Git 安装在 `D:\git\Git\cmd\git.exe`（2.55.0），它的 schannel 路径能工作，但 DSH 自带的 git（2.56.0）不行；两者现在都已验证。
 
-## 4. Git 身份
-
-```ini
-[user]
-	name = ZZZzhize
-	email = jgjcjgzdc@gmail.com
-```
-邮箱与 GitHub 账号 `ZZZzhize`（用户 id `332094283`）公开提交记录里的 `jgjcjgzdc@gmail.com` 一致。
-
-凭据由 Git Credential Manager 提供（系统级 `credential.helper` 指向 DSH 自带的 `git-credential-manager.exe`），已存有 github.com 的 OAuth token，无需再输入。
-
 ## 5. 工具链
 
 | 工具 | 位置 / 版本 |
@@ -95,14 +84,3 @@ subject = CN=github.com
 - 用户 profile：`C:\Users\ZZZzhize1\.dsh\profiles\desktop\`（`package.json` / `cordis.yml` / `cordis.patch.yml` / `pnpm-workspace.yaml`）
   - 已装 bundle：`@deepseek-ai/dsh-base`、`@deepseek-ai/dsh-web-app`、`dsh-whale-widget`、`dshmarket`、`dsh-better-sidebar`、`dsh-our-free-model`、`dsh-ops`、`billion-context`、`dsh-orb`、`dsh-session-manager`
 - Web GUI 当前地址：`http://127.0.0.1:59469`
-
-## 7. 账号下其他仓库
-
-- `ZZZzhize/dsh-1` —— 目标仓库（当前工作区）
-- `ZZZzhize/codex-1` —— 空仓库（仅 Initial commit）
-- 参考社区插件：`Ebony-Vinyl/dsh-our-free-model`（`cordis.patch.yml` + `client.js`/`index.js` 形态的插件范例）
-
-## 8. 尚未确定 / 待用户确认
-
-- `dsh-1` 仓库的定位：目前只有 README。是想**从零搭一个 DSH 插件/配置仓库**，还是作为 **upstream 的 fork**（改 origin 指向 `deepseek-ai/deepseek-harness` 并在此开发）？
-- 是否需要把 `D:\dsh-upstream` 纳入版本管理，或仅作只读参考？
